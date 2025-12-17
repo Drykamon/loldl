@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#121213">
+    <title>LoLdle Quiz</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://lol-stats.net/uploads/blog/loldle-logo.png" alt="Loldle Logo" class="logo">
+            <h1>Adivina el Campeón</h1>
+        </header>
+
+        <div class="game-area">
+            <div class="search-container">
+                <input type="text" id="champion-input" placeholder="Escribe el nombre del campeón..." autocomplete="off">
+                <div id="suggestions" class="suggestions-box hidden"></div>
+            </div>
+            
+            <div class="table-container">
+                <div class="header-row">
+                    <div class="col">Campeón</div>
+                    <div class="col">Género</div>
+                    <div class="col">Posición</div>
+                    <div class="col">Clase</div>
+                    <div class="col">Recurso</div>
+                    <div class="col">Rango</div>
+                    <div class="col">Región</div>
+                    <div class="col">Año</div>
+                </div>
+                <div id="results-container">
+                    <!-- Guesses will be added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for victory -->
+    <div id="victory-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="victory-title">¡Victoria!</h2>
+            <p id="victory-message">Has adivinado el campeón.</p>
+            <img id="victory-image" src="" alt="Campeón">
+            <button onclick="location.reload()">Jugar de nuevo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
